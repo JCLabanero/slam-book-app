@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="welcome">
+
+        <item name="android:textSize">
+            30sp
+        </item>
+
+        <item name="android:textColor">
+            #393939
+        </item>
+
+    </style>
+    <style name="primary">
+        <item name="android:textSize">
+        12sp
+        </item>
+        <item name="android:textColor">
+            #0038FF
+        </item>
+    </style>
+    <style name="primary_black">
+
+    <item name="android:textSize">
+        12sp
+    </item>
+
+    <item name="android:textColor">
+        #393939
+    </item>
+
+    </style>
+</resources>

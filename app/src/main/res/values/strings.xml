@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SlamBook</string>
+    <string name="welcome">Welcome</string>
+    <string name="noAccount">Don\'t have an account?</string>
+    <string name="login">Log in</string>
+    <string name="forgotpass">Forgot password?</string>
+    <string name="pass">Password</string>
+    <string name="email">Email</string>
+    <string name="loginImage">Login</string>
+    <string name="lineBreak">or login with</string>
+</resources>

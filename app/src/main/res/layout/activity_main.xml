@@ -80,15 +80,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/loginImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/art" />
+        app:srcCompat="@drawable/buddies" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -107,7 +107,7 @@
             android:importantForAutofill="no"
             android:text="@string/noAccount"
             android:textAppearance="@style/primary_black"
-            android:layout_marginRight="8dp"/>
+            android:layout_marginEnd="8dp"/>
 
         <TextView
             android:id="@+id/textView4"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main1Activity">
 
     <TextView
         android:id="@+id/welcome"
@@ -14,8 +14,8 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="44dp"
         android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="@string/welcome"
+        android:gravity="left"
+        android:text="@string/createAccount"
         android:textColor="@color/primary_dark"
         android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
         android:textSize="40sp"
@@ -23,91 +23,91 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="322dp"
+        android:id="@+id/editText"
+        android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="@string/email"
+        android:hint="@string/name"
         android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
+        android:inputType="textPersonName"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
 
     <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="320dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+    <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/pass"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
-
-    <TextView
-        android:id="@+id/textForgotPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:importantForAutofill="no"
-        android:text="@string/forgotpass"
-        android:textAppearance="@style/primary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:width="320dp"
         android:height="49dp"
-        android:background="@drawable/button_primary"
+        android:background="@drawable/button_primary_custom"
         android:importantForAutofill="no"
-        android:text="@string/login"
+        android:text="@string/signup"
         android:textAllCaps="false"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textForgotPass"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_marginTop="32dp"
         android:contentDescription="@string/loginImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/buddies" />
+        app:srcCompat="@drawable/sculpting" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        android:layout_marginTop="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/button">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:importantForAutofill="no"
-            android:text="@string/noAccount"
-            android:textAppearance="@style/primary_black"
-            android:layout_marginEnd="8dp"/>
+            android:text="@string/haveAccount"
+            android:textAppearance="@style/primary_black" />
 
         <TextView
             android:id="@+id/textView4"
@@ -115,51 +115,54 @@
             android:layout_height="wrap_content"
             android:importantForAutofill="no"
             android:text="@string/login"
-            android:textAppearance="@style/primary"/>
+            android:textAppearance="@style/primary" />
 
-<!--            android:textAppearance="@style/primary_black"-->
-<!--            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"/>-->
+        <!--            android:textAppearance="@style/primary_black"-->
+        <!--            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"/>-->
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        android:layout_marginTop="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
         <View
             android:id="@+id/view1"
             android:layout_width="130dp"
-            android:layout_height="2dp"
-            android:background="@color/primary_gray"/>
+            android:layout_height="1dp"
+            android:background="@color/primary_gray" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="8dp"
             android:gravity="center"
-            android:text="@string/lineBreak"/>
+            android:text="@string/lineBreak" />
+
         <View
             android:id="@+id/view2"
             android:layout_width="130dp"
-            android:layout_height="2dp"
-            android:background="@color/primary_gray"/>
+            android:layout_height="1dp"
+            android:background="@color/primary_gray" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        android:layout_marginTop="16dp">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <Button
             android:id="@+id/button2"
@@ -183,4 +186,5 @@
             android:background="@drawable/ic_launcher_background"
             android:contentDescription="Login with twitter" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

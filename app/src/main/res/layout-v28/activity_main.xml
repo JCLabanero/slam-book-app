@@ -9,24 +9,24 @@
     <TextView
         android:id="@+id/welcome"
         android:layout_width="200dp"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="16dp"
-        android:gravity="top"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="@string/welcome"
         android:textColor="@color/primary_dark"
-        android:textSize="40dp"
         android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+        android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="322dp"
+        android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/email"
         android:importantForAutofill="no"
@@ -49,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textForgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -65,67 +65,122 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="16dp"
         android:width="320dp"
         android:height="49dp"
-        android:background="@drawable/button_primary"
+        android:background="@drawable/button_primary_custom"
         android:importantForAutofill="no"
         android:text="@string/login"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
-        tools:ignore="TextContrastCheck"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/textForgotPass"
+        tools:ignore="TextContrastCheck" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/loginImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/art" />
+        app:srcCompat="@drawable/buddies" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:importantForAutofill="no"
-        android:text="@string/noAccount"
-        android:textAppearance="@style/primary_black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:importantForAutofill="no"
-        android:text="@string/login"
-        android:textAppearance="@style/primary_black"
-        android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toTopOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="@string/lineBreak"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:drawableStartCompat="@drawable/draw_line"
-        app:drawableEndCompat="@drawable/draw_line" />
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:text="@string/noAccount"
+            android:textAppearance="@style/primary_black"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAutofill="no"
+            android:text="@string/signup"
+            android:textAppearance="@style/primary"/>
+
+        <!--            android:textAppearance="@style/primary_black"-->
+        <!--            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        android:layout_marginTop="16dp">
+        <View
+            android:id="@+id/view1"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:background="@color/primary_gray"/>
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:gravity="center"
+            android:text="@string/lineBreak"/>
+        <View
+            android:id="@+id/view2"
+            android:layout_width="130dp"
+            android:layout_height="1dp"
+            android:background="@color/primary_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_circle"
+            android:contentDescription="Login with facebook" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_circle"
+            android:contentDescription="Login with gmail" />
+
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/ic_launcher_background"
+            android:contentDescription="Login with twitter" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

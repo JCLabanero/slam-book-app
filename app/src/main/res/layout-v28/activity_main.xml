@@ -13,11 +13,10 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="@string/welcome"
         android:textColor="@color/primary_dark"
-        android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+        android:textStyle="bold"
         android:textSize="40sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -26,11 +25,13 @@
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="320dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="@string/email"
         android:importantForAutofill="no"
         android:inputType="textEmailAddress"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcome" />
@@ -44,6 +45,8 @@
         android:hint="@string/pass"
         android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_baseline_lock_24"
+        android:drawablePadding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
@@ -126,28 +129,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        android:layout_marginTop="16dp">
+        app:layout_constraintStart_toStartOf="parent">
+
         <View
             android:id="@+id/view1"
             android:layout_width="130dp"
             android:layout_height="1dp"
-            android:background="@color/primary_gray"/>
+            android:background="@color/primary_gray" />
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="8dp"
+            android:layout_margin="8dp"
             android:gravity="center"
-            android:text="@string/lineBreak"/>
+            android:text="@string/lineBreak" />
+
         <View
             android:id="@+id/view2"
             android:layout_width="130dp"
             android:layout_height="1dp"
-            android:background="@color/primary_gray"/>
+            android:background="@color/primary_gray" />
     </LinearLayout>
 
     <LinearLayout
@@ -156,16 +160,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        android:layout_marginTop="16dp">
+        app:layout_constraintStart_toStartOf="parent">
 
         <Button
             android:id="@+id/button2"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginEnd="8dp"
+            android:layout_margin="8dp"
             android:background="@drawable/button_circle"
             android:contentDescription="Login with facebook" />
 
@@ -173,13 +177,14 @@
             android:id="@+id/button3"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:layout_marginEnd="8dp"
+            android:layout_margin="8dp"
             android:background="@drawable/button_circle"
             android:contentDescription="Login with gmail" />
 
         <ImageButton
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:layout_margin="8dp"
             android:background="@drawable/ic_launcher_background"
             android:contentDescription="Login with twitter" />
     </LinearLayout>
